@@ -1,0 +1,24 @@
+.btn-danger.cancel {
+  margin-left: 5px;
+}
+.image-container {
+  height: 7.5rem;
+  padding-bottom: .5rem;
+}
+.image-container img {
+  height: 7rem;
+}
+.delete {
+  width: 100%;
+}
+.ingredient-row {
+  margin-top: .5rem;
+}
+.add-ing-btn {
+  margin-top: .5rem;
+  float: right;
+}
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid #dc3545;
+}

@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-12">
+    <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-fluid" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <h1>{{ recipe.name }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="btn-group" role="group">
+      <button
+        type="button"
+        class="btn btn-success"
+        (click)="onAddToShoppingList()">Add to Shopping List</button>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="onEditRecipe()">Edit Recipe</button>
+      <button
+        type="button"
+        class="btn btn-danger"
+        (click)="onDeleteRecipe()">Delete Recipe</button>
+    </div>
+  </div>
+</div>
+<div class="row my-3">
+  <div class="col-12">
+    {{ recipe.description }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <span
+      *ngFor="let ingredient of recipe.ingredients"
+      class="badge badge-warning">
+      {{ ingredient.name }}
+      <span class="badge badge-light">{{ ingredient.amount }}</span>
+    </span>
+  </div>
+</div>

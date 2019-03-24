@@ -1,0 +1,12 @@
+.home {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10%;
+}
+.home .btn {
+  margin-top: 2rem;
+}
+.home .btn-warning {
+  margin-left: .5rem;
+}

@@ -1,0 +1,14 @@
+a.list-group-item {
+  background-color: #FFF;
+  transition: all .4s ease-out;
+}
+
+a.list-group-item:hover {
+  cursor: pointer;
+  background-color: #f8f9fa;
+}
+a.active {
+  border: 1px solid rgba(0,0,0,.125);
+  background-color: #f8f9fa;
+  color: #333;
+}

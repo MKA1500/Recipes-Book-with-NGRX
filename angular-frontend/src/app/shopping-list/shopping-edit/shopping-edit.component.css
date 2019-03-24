@@ -1,0 +1,12 @@
+.buttons-group {
+  align-items: flex-end;
+  display: flex;
+  padding-bottom: 1rem;
+}
+.buttons-group button {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+.buttons-group button:first-child {
+  margin-left: 0;
+}

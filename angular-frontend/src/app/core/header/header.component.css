@@ -1,0 +1,24 @@
+a:hover {
+  cursor: pointer;
+}
+
+.collapse.navbar-collapse {
+  justify-content: space-between;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.nav-item {
+  padding-top: .15rem;
+}
+
+.active .nav-link {
+  color: #007bff;
+}
+
+.btn,
+a:not([href]):not([tabindex]) {
+  margin-left: .5rem;
+}
