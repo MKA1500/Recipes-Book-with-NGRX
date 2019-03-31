@@ -10,20 +10,8 @@ export class ShoppingListService {
     new Ingredient('Onion', 2)
   ];
 
-  getIngredients() {
-    // return copy:
-    return this.ingredients.slice();
-    // but in this case we will need to inform our component that some new data
-    // is available => ingredientsChanged
-  }
-
   getIngredient(index: number) {
     return this.ingredients[index];
-  }
-
-  addIngredient(ingredient: Ingredient) {
-    this.ingredients.push(ingredient);
-    this.ingredientsChanged.next(this.ingredients.slice());
   }
 
   addIngredients(ingredients: Ingredient[]) {
@@ -32,6 +20,18 @@ export class ShoppingListService {
     // }
     // this above would emit many events, so:
     this.ingredients.push(...ingredients);
+    this.ingredientsChanged.next(this.ingredients.slice());
+  }
+
+  getIngredients() {
+    // return copy:
+    return this.ingredients.slice();
+    // but in this case we will need to inform our component that some new data
+    // is available => ingredientsChanged
+  }
+
+  addIngredient(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
     this.ingredientsChanged.next(this.ingredients.slice());
   }
 
