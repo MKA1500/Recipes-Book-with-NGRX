@@ -1,12 +1,8 @@
-import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Store } from '@ngrx/store';
-
 import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
-import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
-@Injectable()
+// no @Injectable() because I am not injecting anything to this service...
 export class RecipeService {
   recipesChanged = new Subject<Recipe[]>();
 
@@ -53,7 +49,7 @@ export class RecipeService {
     )
   ];
 
-  constructor(private slService: ShoppingListService, private store: Store) {}
+  constructor() {}
 
   setRecipes(recipes: Recipe[]) {
     this.recipes = recipes;
@@ -68,10 +64,6 @@ export class RecipeService {
 
   getRecipe(index: number) {
     return this.recipes[index];
-  }
-
-  addIngredientsToShoppingList(ingredients: Ingredient[]) {
-    this.slService.addIngredients(ingredients);
   }
 
   addRecipe(recipe: Recipe) {
